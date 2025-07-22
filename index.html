@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAWASAN WISATA KALISUCI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>KAWASAN WISATA KALISUCI</h1>
+  </header>
+  <nav>
+    <ul>
+    <li><a href="index.html">BERANDA</a></li>
+    <li><a href="adventure.html">ADVENTURE</a></li>
+    <li><a href="outbond.html">OUT BOUND</a></li>
+    <li><a href="hubungikami.html">CONTACT PERSONE</a>
+    </ul>
+    </nav>
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="agenda">
+        <h2>WISATA ADVENTURE</h2>
+        <table>
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Hari</th>
+            <th>Tanggal</th>
+          </tr>
+          </thead>
+            <tr>
+            <td>1</td>
+            <td>Sabtu</td>
+            <td>21 Juni 2025</td>
+          </tr>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>Minggu</td>
+            <td>22 Juni 2025</td>
+          </tr>
+        </table>
+      </div>
+    <div class="galeri">
+     Galeri Foto
+  <div class="slider">
+    <img src="foto/slide1.jpeg" class="slide active">
+    <img src="foto/slide2.jpeg" class="slide">
+    <img src="foto/slide3.jpeg" class="slide">
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="content">
+<h2>Selamat Datang di Kawasan Wisata Kalisuci</h2>
+<p>
+  Kami ucapkan selamat datang di website resmi Kawasan wisata kalisuci,GunungKidul yang berbukit-bukit ternyata menyimpan kekayaan yang luar biasa, salah satunya adalah Kalisuci. Bagi penikmat wisata ekstrem yang ingin memacu adrenalin, menyusuri goa Kalisuci yang berair dengan menggunakan ban pelampung merupakan suatu kenikmatan tersendiri.
+
+Terletak di Desa Semenu, Kabupaten Gunung Kidul, Yogyakarta, tempat wisata bernama lengkap Kalisuci Cave Tubing ini selalu ramai didatangi para wisatawan baik lokal maupun asing. Selain wisata cave tubing makin digemari banyak orang, gua berair tempat melakukan aktifitas susur gua juga sangat terbatas. Tercatat, hanya tiga negara yang memiliki wisata cave tubing, yaitu New Zealand, Mexico, dan Indonesia dengan Gunung Kidulnya.
+<p>
+  Jelajahi halaman kami untuk mengetahui lebih banyak tentang kegiatan, galeri foto, serta acara-acara terbaru yang berlangsung di desa kami.
+</p>
+    </div>
+    </div>
+    <footer>
+    <p>Hak Cipta © 2015 Cave Tubing Kali Suci</p>
+    </footer>
+      <script>
+  let slideIndex = 0;
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function currentSlide(index) {
+    slideIndex = index;
+    showSlide(slideIndex);
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  setInterval(nextSlide, 3000); 
+</script>
+</body>
+</html>

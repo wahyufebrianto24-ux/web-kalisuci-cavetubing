@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAWASAN WISATA KALISUCI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>KAWASAN WISATA KALISUCI</h1>
+  </header>
+  <nav>
+    <ul>
+    <li><a href="index.html">BERANDA</a></li>
+    <li><a href="adventure.html">ADVENTURE</a></li>
+    <li><a href="outbond.html">OUT BOUND</a></li>
+    <li><a href="hubungikami.html">CONTACT PERSONE</a>
+    </ul>
+    </nav>
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="agenda">
+        <h2>Agenda Wisata</h2>
+        <table>
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Hari</th>
+            <th>Tanggal</th>
+          </tr>
+          </thead>
+            <tr>
+            <td>1</td>
+            <td>Sabtu</td>
+            <td>21 Juni 2025</td>
+          </tr>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>Minggu</td>
+            <td>22 Juni 2025</td>
+          </tr>
+        </table>
+      </div>
+    <div class="galeri">
+     Galeri Foto
+  <div class="slider">
+    <img src="foto/slide1.jpeg" class="slide active">
+    <img src="foto/slide2.jpeg" class="slide">
+    <img src="foto/slide3.jpeg" class="slide">
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="content">
+    <a href="outbond.html">
+        <img src="foto/back.png" width="30px" height="30px">
+    </a>
+   <br>
+        <img src="foto/rafling.jpg" id="gambarkiri" width="200px" height="150px" style="border: 1px solid black;">
+            <p> Rapling adalah bagian dari kegiatan panjat tebing, rescue (penyelamatan), atau outbound adventure, di mana peserta turun secara terkendali dari ketinggian menggunakan teknik dan alat tertentu.
+
+
+    </p>
+    </div>
+    </div>
+    <footer>
+    <p>Hak Cipta © 2015 Cave Tubing Kali Suci</p>
+    </footer>
+      <script>
+  let slideIndex = 0;
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function currentSlide(index) {
+    slideIndex = index;
+    showSlide(slideIndex);
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  setInterval(nextSlide, 3000); // Ganti setiap 3 detik
+</script>
+</body>
+</html>
